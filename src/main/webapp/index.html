@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milana Test Automation Portal</title>
+    <link rel="stylesheet" href="resources\css\styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Milana Test Automation Portal</h1>
+        <form id="commandForm">
+            <div class="form-group">
+                <label for="suiteType">Suite Type:</label>
+                <select id="suiteType" name="suiteType" required>
+                    <option value="">Select Suite Type</option>
+                    <option value="@sagar">Sagar</option>
+                    <option value="smoke">Smoke</option>
+                    <option value="sanity">Sanity</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="environment">Environment:</label>
+                <select id="environment" name="environment" required>
+                    <option value="">Select Environment</option>
+                    <option value="dev">Development</option>
+                    <option value="autoqa">Quality Assurance</option>
+                    <option value="prod">Production</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="executedBy">Executed By:</label>
+                <input type="text" id="executedBy" name="executedBy" required>
+            </div>
+            <div class="form-group">
+                <label for="executedDate">Executed Date:</label>
+                <input type="date" id="executedDate" name="executedDate" required>
+            </div>
+            <button type="button" onclick="generateBatchFile()">Generate and Download Batch File</button>
+        </form>
+        <p><b>NOTE:</b> Once the .bat file gets downloaded, execute this .bat file by double clicking on the file.</p>
+    </div>
+       
+    <textarea id="commandOutput" rows="5" readonly></textarea>
+    <script src="resources\js\scripts.js"></script>
+
+</body>
+</html>

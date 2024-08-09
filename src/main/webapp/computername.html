@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computer Name</title>
+</head>
+<body>
+    <h1>Computer Name</h1>
+    <p id="computer-name">Loading...</p>
+    <script>
+        fetch('http://localhost:3000/computer-name')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('computer-name').textContent = data.computerName;
+            })
+            .catch(error => {
+                console.error('Error fetching computer name:', error);
+                document.getElementById('computer-name').textContent = 'Error retrieving computer name';
+            });
+    </script>
+</body>
+</html>
